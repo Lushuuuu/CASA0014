@@ -35,3 +35,35 @@ The prototype uses the following hardware:
 The electronics are housed inside a repurposed AirPods Pro cardboard box. This approach allowed me to create a compact prototype using an existing object rather than fabricating a new enclosure.
 
 The enclosure brings the RFID reader, NeoPixel and buzzer together into a single physical interface. Photographs of the assembled electronics and enclosure are available in the [`images`](images/) folder.
+
+
+## How the System Works
+
+The prototype converts a student card scan into a repeatable lighting sequence that is transmitted to the Vespera installation at UCL.
+
+### Interaction Process
+
+1. **RFID detection:** A student places their university card near the PN532 reader, which reads the card's unique identifier (UID).
+2. **UID processing:** The Arduino processes the UID using an FNV-1a hash function to generate a numerical seed.
+3. **Pattern generation:** A deterministic pseudo-random algorithm uses this seed to generate a sequence of five colour and duration combinations.
+4. **Local feedback:** The NeoPixel and buzzer provide immediate feedback to the person interacting with the prototype.
+5. **Network communication:** The Arduino connects to the MQTT broker over Wi-Fi and publishes lighting commands to the Vespera installation.
+6. **Physical output:** Vespera receives the commands and displays the generated colours through its lighting system.
+
+### Deterministic Lighting Patterns
+
+A key design decision was to make the lighting patterns deterministic. This means that scanning the same card produces the same sequence of colours and durations.
+
+The UID is used as the input to a hashing and pseudo-random generation process, rather than simply selecting a completely new random pattern for every interaction.
+
+Each sequence contains five steps, using a palette of eight colours and durations of either 300 or 700 milliseconds. The algorithm also avoids repeating the same colour in consecutive steps.
+
+Different cards may occasionally produce the same sequence, so these patterns should not be considered unique identifiers or secure authentication mechanisms.
+
+### MQTT Communication
+
+The Arduino communicates with Vespera using MQTT, a lightweight publish–subscribe messaging protocol commonly used in Internet of Things systems.
+
+For each generated colour, the Arduino publishes an RGB lighting payload to the designated Vespera MQTT topic. This allows a physical RFID interaction at the prototype to control a separate network-connected lighting installation.
+
+The Wi-Fi and MQTT credentials are stored separately in `arduino_secrets.h`, which is not included in the public repository.
