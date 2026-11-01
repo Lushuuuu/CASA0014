@@ -134,3 +134,18 @@ Testing was carried out to evaluate whether the RFID prototype behaves consisten
 **Outcome:** Pass.
 
 **Interpretation:** This result is consistent with the intended deterministic behaviour of the pattern-generation algorithm. It demonstrates repeatability for the card tested, although further testing with additional cards would be needed to assess the system more broadly.
+
+
+### Test 2 — Variation Between Different RFID Cards
+
+**Objective:** Investigate whether different student cards generate different lighting patterns.
+
+**Method:** Scan two different student cards and compare the resulting colour sequences.
+
+**Observed result:** The two cards produced different colours.
+
+**Outcome:** Pass.
+
+**Interpretation:** This observation supports the intended behaviour of using the RFID UID to influence the generated lighting pattern. Combined with Test 1, it suggests that the prototype can produce repeatable but varied visual outputs depending on the card scanned.
+
+**Limitation:** This test does not establish that every card generates a unique pattern. Different UIDs may occasionally produce identical sequences.
