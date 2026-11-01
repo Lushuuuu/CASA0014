@@ -149,3 +149,19 @@ Testing was carried out to evaluate whether the RFID prototype behaves consisten
 **Interpretation:** This observation supports the intended behaviour of using the RFID UID to influence the generated lighting pattern. Combined with Test 1, it suggests that the prototype can produce repeatable but varied visual outputs depending on the card scanned.
 
 **Limitation:** This test does not establish that every card generates a unique pattern. Different UIDs may occasionally produce identical sequences.
+
+### Test 3 — End-to-End MQTT Communication with Vespera
+
+**Objective:** Verify that scanning an RFID card on the physical prototype can control the Vespera lighting installation at UCL.
+
+**Method:** Connect the Arduino MKR WiFi 1010 to the Wi-Fi network and MQTT broker, scan a student card using the PN532 reader, and observe the response of the Vespera installation.
+
+**Observed result:** The Vespera installation responded to the RFID scan by displaying the generated lighting colours.
+
+**Outcome:** Pass.
+
+**Interpretation:** This confirms that the complete interaction worked during testing: RFID detection, local pattern generation, Wi-Fi communication, MQTT message transmission and remote lighting output.
+
+**Photographic evidence:** Photographs of the prototype and the Vespera installation during testing are available in the [`images`](images/) folder.
+
+**Limitation:** This successful test does not establish long-term network reliability or behaviour during Wi-Fi or MQTT disconnections.
