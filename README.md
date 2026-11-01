@@ -67,3 +67,26 @@ The Arduino communicates with Vespera using MQTT, a lightweight publish–subscr
 For each generated colour, the Arduino publishes an RGB lighting payload to the designated Vespera MQTT topic. This allows a physical RFID interaction at the prototype to control a separate network-connected lighting installation.
 
 The Wi-Fi and MQTT credentials are stored separately in `arduino_secrets.h`, which is not included in the public repository.
+
+
+## System Architecture
+
+The diagram below illustrates how a student card interaction is processed locally and transmitted to the Vespera installation.
+
+```mermaid
+flowchart TD
+    A[Student ID Card] -->|RFID scan| B[PN532 RFID Reader]
+    B -->|I2C / UID| C[Arduino MKR WiFi 1010]
+    C --> D[FNV-1a Hash]
+    D --> E[Deterministic Pattern Generator]
+    E --> F[NeoPixel and Buzzer]
+    E --> G[Wi-Fi and MQTT]
+    G --> H[MQTT Broker]
+    H --> I[Vespera Lighting Installation]
+```
+
+The PN532 reads the card UID and sends it to the Arduino over I2C. The Arduino converts the UID into a deterministic five-step lighting sequence.
+
+The generated pattern provides local feedback through the NeoPixel and buzzer, while RGB lighting commands are published through MQTT to control the remote Vespera installation.
+
+This separates the physical interaction, local computation, network communication and remote lighting output into distinct parts of the system.
