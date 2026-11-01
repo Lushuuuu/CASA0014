@@ -15,3 +15,23 @@ The same card generates the same lighting sequence each time, creating a consist
 The aim is to investigate how RFID sensing, embedded computing and network communication can turn a simple physical interaction into a shared visual experience.
 
 Rather than displaying personal information, the prototype uses the card's UID as an input to generate a deterministic lighting pattern.
+
+
+## Hardware Components
+
+The prototype uses the following hardware:
+
+| Component | Purpose |
+|---|---|
+| Arduino MKR WiFi 1010 | Main microcontroller, responsible for processing RFID inputs and communicating with the Vespera installation over Wi-Fi and MQTT. |
+| PN532 RFID reader | Detects student cards and reads their unique identifiers (UIDs) using I2C communication. |
+| NeoPixel RGB LED | Displays colour feedback generated from the scanned card. |
+| Piezo buzzer | Provides audible feedback during interaction. |
+| Jumper wires and connecting components | Connect the electronic components to the Arduino. |
+| Repurposed AirPods Pro cardboard box | Houses the prototype and provides a compact physical enclosure. |
+
+### Physical Design
+
+The electronics are housed inside a repurposed AirPods Pro cardboard box. This approach allowed me to create a compact prototype using an existing object rather than fabricating a new enclosure.
+
+The enclosure brings the RFID reader, NeoPixel and buzzer together into a single physical interface. Photographs of the assembled electronics and enclosure are available in the [`images`](images/) folder.
