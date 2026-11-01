@@ -118,3 +118,19 @@ The diagram below illustrates the connections between the Arduino MKR WiFi 1010,
 The Arduino MKR WiFi 1010 uses 3.3V logic. The NeoPixel is powered from 5V, so a suitable logic-level shifter is recommended for reliable operation. The buzzer must also be compatible with the Arduino's voltage and current limits.
 
 The wiring diagram is an illustrative overview; the connection table records the connections used in the prototype. The PN532 module's supply-voltage requirements should be checked against its specifications.
+
+## Testing and Validation
+
+Testing was carried out to evaluate whether the RFID prototype behaves consistently and successfully communicates with the Vespera installation.
+
+### Test 1 — Repeatability of RFID-Generated Patterns
+
+**Objective:** Verify that scanning the same RFID card multiple times produces the same lighting sequence.
+
+**Method:** Scan the same student card twice and compare the resulting five-step colour sequences.
+
+**Observed result:** Both scans produced the same lighting sequence.
+
+**Outcome:** Pass.
+
+**Interpretation:** This result is consistent with the intended deterministic behaviour of the pattern-generation algorithm. It demonstrates repeatability for the card tested, although further testing with additional cards would be needed to assess the system more broadly.
