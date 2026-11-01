@@ -97,3 +97,24 @@ This separates the physical interaction, local computation, network communicatio
 The diagram below illustrates the connections between the Arduino MKR WiFi 1010, PN532 RFID reader, NeoPixel RGB LED and buzzer.
 
 ![Prototype wiring diagram](images/wiring-diagram.png)
+
+
+### Wiring Connections
+
+| Component | Component pin | Arduino MKR WiFi 1010 connection |
+|---|---|---|
+| PN532 RFID reader | VCC | VCC |
+| PN532 RFID reader | GND | GND |
+| PN532 RFID reader | SDA | SDA |
+| PN532 RFID reader | SCL | SCL |
+| NeoPixel RGB LED | 5V | 5V |
+| NeoPixel RGB LED | DI (Data In) | Digital pin 6 |
+| NeoPixel RGB LED | GND | GND |
+| Buzzer | Positive (+) | Digital pin 5 |
+| Buzzer | Negative (−) | GND |
+
+**Technical notes:** The PN532 communicates with the Arduino through I2C using SDA and SCL. All components share a common ground.
+
+The Arduino MKR WiFi 1010 uses 3.3V logic. The NeoPixel is powered from 5V, so a suitable logic-level shifter is recommended for reliable operation. The buzzer must also be compatible with the Arduino's voltage and current limits.
+
+The wiring diagram is an illustrative overview; the connection table records the connections used in the prototype. The PN532 module's supply-voltage requirements should be checked against its specifications.
