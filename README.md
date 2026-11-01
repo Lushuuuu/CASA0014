@@ -90,3 +90,10 @@ The PN532 reads the card UID and sends it to the Arduino over I2C. The Arduino c
 The generated pattern provides local feedback through the NeoPixel and buzzer, while RGB lighting commands are published through MQTT to control the remote Vespera installation.
 
 This separates the physical interaction, local computation, network communication and remote lighting output into distinct parts of the system.
+
+
+## Wiring Diagram
+
+The diagram below illustrates the connections between the Arduino MKR WiFi 1010, PN532 RFID reader, NeoPixel RGB LED and buzzer.
+
+![Prototype wiring diagram](images/wiring-diagram.png)
