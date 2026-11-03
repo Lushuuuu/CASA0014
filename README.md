@@ -247,7 +247,7 @@ The images below document the physical prototype, its hardware integration and i
 
 ### Finished Prototype
 
-![Finished RFID prototype](images/IMG_5042.JPG)
+![Finished RFID prototype](images/IMG_5042.jpg)
 
 *The completed RFID interaction device housed in a repurposed AirPods Pro box.*
 
