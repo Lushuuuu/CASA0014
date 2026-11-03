@@ -189,3 +189,53 @@ I tested this version on the physical prototype and confirmed that it operated s
 ### Lessons from Iteration
 
 This development process highlighted the importance of testing after refactoring code. A program compiling successfully does not necessarily mean that its behaviour is correct. Testing the complete interaction, from RFID scanning to physical lighting output, was essential for evaluating the revised prototype.
+
+
+## Software Setup and Reproduction
+
+### Requirements
+
+The prototype was developed using the Arduino IDE and an Arduino MKR WiFi 1010.
+
+The following Arduino libraries are required:
+
+| Library | Purpose |
+|---|---|
+| WiFiNINA | Connects the Arduino to a Wi-Fi network |
+| PubSubClient | Communicates with the MQTT broker |
+| Adafruit PN532 | Reads RFID cards through the PN532 module |
+| Adafruit NeoPixel | Controls the local RGB LED |
+
+The sketch also uses the Arduino `Wire` library for I2C communication.
+
+### Installation
+
+1. Install the Arduino IDE.
+2. Open **Tools → Board → Boards Manager** and install **Arduino SAMD Boards (32-bits ARM Cortex-M0+)**.
+3. Select **Arduino MKR WiFi 1010** as the board.
+4. Open **Sketch → Include Library → Manage Libraries** and install the required libraries.
+5. Open the latest tested Arduino sketch from this repository.
+6. Create a local `arduino_secrets.h` file containing the required Wi-Fi and MQTT credentials.
+7. Connect the Arduino MKR WiFi 1010 to your computer using USB.
+8. Select the correct serial port and upload the sketch.
+9. Open the Serial Monitor at **115200 baud** to observe RFID scans and generated lighting patterns.
+
+### Network Configuration
+
+The prototype uses Wi-Fi and MQTT to communicate with the Vespera lighting installation.
+
+Connection settings and credentials are stored separately from the main Arduino sketch to avoid exposing sensitive information.
+
+The MQTT connection uses an authorised university network and lighting installation. Access details are not provided publicly.
+
+Users can reproduce the local RFID interaction, colour generation, NeoPixel feedback and buzzer behaviour without access to the Vespera installation. Remote lighting functionality requires appropriate network access and authorisation.
+
+### Testing the Prototype
+
+After uploading the sketch, place an RFID card near the PN532 reader.
+
+The device should read the card, provide local feedback through the NeoPixel and buzzer, and generate a five-step lighting pattern.
+
+When connected to the authorised Vespera MQTT network, the prototype should also transmit the lighting commands to the installation.
+
+Scanning the same card again should reproduce the same pattern.
