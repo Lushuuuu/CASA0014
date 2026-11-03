@@ -1,5 +1,24 @@
 # CASA0014 — RFID-to-Light Interface for Vespera
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Current Working Version](#current-working-version)
+- [Project Aim](#project-aim)
+- [Hardware Components](#hardware-components)
+- [Physical Design](#physical-design)
+- [How the System Works](#how-the-system-works)
+  - [Interaction Process](#interaction-process)
+  - [Deterministic Lighting Patterns](#deterministic-lighting-patterns)
+  - [MQTT Communication](#mqtt-communication)
+- [System Architecture](#system-architecture)
+- [Wiring Diagram](#wiring-diagram)
+  - [Wiring Connections](#wiring-connections)
+- [Testing and Validation](#testing-and-validation)
+- [Development and Iteration](#development-and-iteration)
+- [Software Setup and Reproduction](#software-setup-and-reproduction)
+- [Prototype Gallery](#prototype-gallery)
+
 ## Project Overview
 
 This project explores how a familiar everyday object — a university student ID card — can become an interface for interacting with a connected lighting installation.
