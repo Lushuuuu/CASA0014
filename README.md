@@ -10,6 +10,15 @@ The device provides immediate local feedback through an LED, a NeoPixel and a bu
 
 The same card generates the same lighting sequence each time, creating a consistent relationship between a physical identity token and a visual output.
 
+
+### Current Working Version
+
+**Version 3 is the latest tested version of the prototype.**
+
+It has been tested with the Arduino hardware and Vespera lighting installation. The earlier versions are retained to document the development and debugging process.
+
+The prototype generates a repeatable five-step colour pattern from an RFID card and provides local feedback through the NeoPixel and buzzer.
+
 ## Project Aim
 
 The aim is to investigate how RFID sensing, embedded computing and network communication can turn a simple physical interaction into a shared visual experience.
