@@ -18,6 +18,7 @@
 - [Development and Iteration](#development-and-iteration)
 - [Software Setup and Reproduction](#software-setup-and-reproduction)
 - [Prototype Gallery](#prototype-gallery)
+- [Acknowledgements and AI Use Declaration](#acknowledgements-and-ai-use-declaration)
 
 ## Project Overview
 
@@ -296,3 +297,16 @@ The images below document the physical prototype, its hardware integration and i
 ![Vespera lighting installation](images/IMG_4965.JPG)
 
 *The Vespera installation responding to lighting commands transmitted from the prototype.*
+
+
+## Acknowledgements and AI Use Declaration
+
+This project was developed as part of the CASA0014 *Prototyping the Internet of Things* module at University College London (UCL).
+
+Generative AI tools, including ChatGPT (OpenAI), were used to support the development and documentation of this project.
+
+**Code development:** AI assistance was used to help write, simplify, debug and explain parts of the Arduino code. The resulting code was implemented and tested on the physical prototype, including its interaction with the Vespera lighting installation.
+
+**Documentation:** AI assistance was used to improve the clarity, structure, grammar and presentation of the GitHub README. The project descriptions, hardware implementation, testing observations and development process are based on the work carried out during this project.
+
+**Responsibility:** I reviewed the AI-assisted outputs and take responsibility for the final implementation, documentation and submitted work.
