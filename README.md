@@ -310,3 +310,5 @@ Generative AI tools, including ChatGPT (OpenAI), were used to support the develo
 **Documentation:** AI assistance was used to improve the clarity, structure, grammar and presentation of the GitHub README. The project descriptions, hardware implementation, testing observations and development process are based on the work carried out during this project.
 
 **Responsibility:** I reviewed the AI-assisted outputs and take responsibility for the final implementation, documentation and submitted work.
+
+Thank You!
