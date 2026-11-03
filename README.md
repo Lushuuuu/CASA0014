@@ -239,3 +239,32 @@ The device should read the card, provide local feedback through the NeoPixel and
 When connected to the authorised Vespera MQTT network, the prototype should also transmit the lighting commands to the installation.
 
 Scanning the same card again should reproduce the same pattern.
+
+
+## Prototype Gallery
+
+The images below document the physical prototype, its hardware integration and its interaction with the Vespera lighting installation.
+
+### Finished Prototype
+
+![Finished RFID prototype](images/IMG_5042.JPG)
+
+*The completed RFID interaction device housed in a repurposed AirPods Pro box.*
+
+### Hardware Assembly
+
+![Internal electronics](images/IMG_4980.JPG)
+
+*Arduino MKR WiFi 1010, PN532 RFID reader and other components inside the enclosure.*
+
+### RFID Interaction
+
+![RFID card interaction](images/IMG_4955.JPG)
+
+*Presenting a student card to the reader to trigger a deterministic lighting sequence.*
+
+### Vespera Lighting Response
+
+![Vespera lighting installation](images/IMG_4965.JPG)
+
+*The Vespera installation responding to lighting commands transmitted from the prototype.*
