@@ -18,7 +18,7 @@
 - [Development and Iteration](#development-and-iteration)
 - [Software Setup and Reproduction](#software-setup-and-reproduction)
 - [Prototype Gallery](#prototype-gallery)
-- [Acknowledgements](#acknowledgements-and-ai-use-declaration)
+- [Acknowledgements](#acknowledgements)
 
 ## Project Overview
 
@@ -299,7 +299,7 @@ The images below document the physical prototype, its hardware integration and i
 *The Vespera installation responding to lighting commands transmitted from the prototype.*
 
 
-## Acknowledgements and AI Use Declaration
+## Acknowledgements
 
 This project was developed as part of the CASA0014 *Prototyping the Internet of Things* module at University College London (UCL).
 
