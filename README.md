@@ -18,7 +18,7 @@
 - [Development and Iteration](#development-and-iteration)
 - [Software Setup and Reproduction](#software-setup-and-reproduction)
 - [Prototype Gallery](#prototype-gallery)
-- [Acknowledgements and AI Use Declaration](#acknowledgements-and-ai-use-declaration)
+- [Acknowledgements](#acknowledgements-and-ai-use-declaration)
 
 ## Project Overview
 
