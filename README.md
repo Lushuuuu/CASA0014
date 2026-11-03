@@ -165,3 +165,27 @@ Testing was carried out to evaluate whether the RFID prototype behaves consisten
 **Photographic evidence:** Photographs of the prototype and the Vespera installation during testing are available in the [`images`](images/) folder.
 
 **Limitation:** This successful test does not establish long-term network reliability or behaviour during Wi-Fi or MQTT disconnections.
+
+## Development and Iteration
+
+The Arduino code was developed through three versions, with testing used to identify problems and improve the prototype.
+
+### Version 1 — Initial Working Prototype
+
+The first version established the core interaction: reading an RFID card, generating a five-step lighting sequence, providing local feedback and sending lighting commands to Vespera through MQTT.
+
+### Version 2 — Code Simplification
+
+The second version reorganised and simplified the Arduino sketch, including removing functionality associated with the external green LED used during early testing.
+
+During testing, I observed that scanning the same card appeared to produce different lighting sequences. This was inconsistent with the project's goal of generating repeatable patterns.
+
+### Version 3 — Updated and Tested Prototype
+
+The third version introduced additional Serial Monitor output to display the card information and generated colour sequence, making the system easier to inspect and troubleshoot.
+
+I tested this version on the physical prototype and confirmed that it operated successfully with the Vespera installation.
+
+### Lessons from Iteration
+
+This development process highlighted the importance of testing after refactoring code. A program compiling successfully does not necessarily mean that its behaviour is correct. Testing the complete interaction, from RFID scanning to physical lighting output, was essential for evaluating the revised prototype.
