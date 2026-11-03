@@ -18,9 +18,9 @@ const char* SSID = SECRET_SSID;
 const char* PASSWORD = SECRET_PASS;
 const char* MQTT_USER = SECRET_MQTTUSER;
 const char* MQTT_PASS = SECRET_MQTTPASS;
-const char* MQTT_SERVER = "mqtt.cetools.org";
-const uint16_t MQTT_PORT = 1884;
-const char* MQTT_TOPIC = "student/CASA0014/luminaire/21";
+const char* MQTT_SERVER = SECRET_MQTT_SERVER;
+const uint16_t MQTT_PORT = SECRET_MQTT_PORT;
+const char* MQTT_TOPIC = SECRET_MQTT_TOPIC;
 
 const uint8_t BUZZER_PIN = 5;
 const uint8_t PIXEL_PIN = 6;
